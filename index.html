@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Video Player</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <header>
+        <div class="container-title">
+
+            <div class="title-header">
+                Video Player
+                <div class="line"></div>
+            </div>
+
+        </div>
+    </header>
+    <main>
+    <div class="video_player">
+    <div class="container show-controls">
+        <div class="wrapper">
+            <div class="video-timeline">
+                <div class="progress-area">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+            <ul class="video-controls">
+                <li class="options left">
+                    <button class="volume"><i class="fa-solid fa-volume-high"></i></button>
+                    <input type="range" min="0" max="1" step="any" class="volume-input" value="0.5">
+                    <div class="video-timer">
+                        <p class="current-time">00:00</p>
+                        <p class="separator"> / </p>
+                        <p class="video-duration">01:28</p>
+                    </div>
+                </li>
+                <li class="options center">
+                    <button class="skip-backward"><i class="fas fa-backward"></i></button>
+                    <button class="play-pause"><i class="fas fa-play"></i></button>
+                    <button class="skip-forward"><i class="fas fa-forward"></i></button>
+                </li>
+                <li class="options right">
+                    <button class="fullscreen-btn"><i class="fa-solid fa-expand"></i></button>
+                </li>
+            </ul>
+        </div>
+        <div class="play-overlay">
+            <button class="play-btn"><i class="fas fa-play"></i></button>
+          </div>
+          <video src="velikie-iz-brodyacix-psov-5-sezon-opening_(VIDEOMIN.NET).mp4"></video>
+          <script src="script.js"></script>
+    </div>
+</main>
+<footer>
+    <div class="footer-site">
+    <div class="footer-rss">
+        <div class="year">2023</div>
+        <div class="rss-school"><a href="https://rs.school/js-stage0/">The Rolling Scopes School</a></div>
+        <div class="User"><a href="https://github.com/Rubick1337?tab=repositories">Rubick1337</a></div>
+      </div> 
+    </div>
+</footer>
+</body>
+</html>

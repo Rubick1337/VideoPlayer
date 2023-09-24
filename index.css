@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container-title
+  {
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+  }
+  .line
+  {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 239px;
+    height: 4px;
+    background: #BB945F;
+  }
+  .title-header
+  {
+      font-size: 40px;
+      color: #bdae82;
+      margin: 20px auto;
+      text-align: center;
+      font-weight: 700; 
+  }
+  .footer-site {
+    margin-top: 40px;
+    width: 100%;
+    height: 80px;
+    background: #0C0C0E;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  
+  .footer-site a {
+    color: #FFF;
+    text-decoration: none;
+  }
+  
+  .footer-site a:hover {
+    color: #BB945F;
+    cursor: pointer;
+  }
+  .footer-rss {
+    display: flex;
+    width: 98.6111111%;
+    height: 80px;
+    align-items: center;
+    margin-right: 20px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 2px;
+  }
+  
+  .rss-school {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 22px;
+    flex-grow: 1;
+  }
+  
+  .user {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 113px;
+    height: 22px;
+  }
+  
+  .year {
+    width: 56px;
+    height: 22px;
+    margin-left: 20px;
+  }
+  .video_player
+{
+  min-height: 100vh;
+}
+.video_player,.container, .video-controls, .video-timer, .options{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  width: 93%;
+  user-select: none;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #000;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.container.fullscreen-btn{
+  max-width: 50%;
+  width: 100%;
+  height: 100vh;
+  border-radius: 0px;
+}
+.wrapper{
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+  bottom: -15px;
+  transition: all 0.08s ease;
+}
+.container.show-controls .wrapper{
+  opacity: 1;
+  bottom: 0;
+  transition: all 0.13s ease;
+}
+.video-timeline{
+  height: 7px;
+  width: 100%;
+  cursor: pointer;
+}
+.video-timeline .progress-area{
+  height: 3px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.6);
+}
+.progress-area span{
+  position: absolute;
+  left: 50%;
+  top: -25px;
+  font-size: 13px;
+  color: #fff;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+.progress-area .progress-bar{
+  width: 0%;
+  height: 100%;
+  position: relative;
+  background: #2289ff;
+}
+.wrapper .video-controls{
+  padding: 5px 20px 10px;
+}
+.video-controls .options{
+  width: 100%;
+}
+.video-controls .options:first-child{
+  justify-content: flex-start;
+}
+.video-controls .options:last-child{
+  justify-content: flex-end;
+}
+.options button{
+  height: 40px;
+  width: 40px;
+  font-size: 19px;
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: #efefef;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.options button :where(i, span) {
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+}
+.options button:hover :where(i, span){
+  color: #fff;
+}
+.options button:active :where(i, span){
+  transform: scale(0.9);
+}
+.options button span{
+  font-size: 23px;
+}
+.options input{
+  height: 4px;
+  margin-left: 3px;
+  max-width: 75px;
+  accent-color: #0078FF;
+}
+.options .video-timer{
+  color: #efefef;
+  margin-left: 15px;
+  font-size: 14px;
+}
+.video-timer .separator{
+  margin: 0 5px;
+  font-size: 16px;
+  font-family: "Open sans";
+}
+
+.container video{
+  width: 100%;
+}
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.play-btn {
+  font-size: 40px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.volume-input {
+  height: 10px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+.volume-input::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  width: 10px;
+  height: 10px; 
+  border-radius: 50%;
+  background-color: #BB945F; 
+}
+.volume-input {
+  background: linear-gradient(to right, #0078FF 0%, #0078FF 50%, #c8c8c8 50%, #c8c8c8 100%);
+}
